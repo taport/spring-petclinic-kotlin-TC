@@ -8,7 +8,6 @@ import org.springframework.stereotype.Service
 import org.springframework.transaction.annotation.Transactional
 
 @Service
-@Suppress("JvmCoverageInspection")
 class TransactionalRepository(val pets: PetRepository, val owners: OwnerRepository) {
     @Transactional
     fun saveOwnerAndPet(pet: Pet, owner: Owner) {
