@@ -7,6 +7,9 @@ version: "1.0"
 profile:
   name: qodana.recommended
 
+include:
+  - name: VulnerableLibrariesGlobal
+
 failureConditions:
   severityThresholds:
     critical: 0
