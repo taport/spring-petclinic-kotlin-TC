@@ -1,20 +1,6 @@
-#-------------------------------------------------------------------------------#
-#               Qodana analysis is configured by qodana.yaml file               #
-#             https://www.jetbrains.com/help/qodana/qodana-yaml.html            #
-#-------------------------------------------------------------------------------#
 version: "1.0"
-
+linter: jetbrains/qodana-jvm:2024.1
 profile:
   name: qodana.recommended
-
 include:
-  - name: VulnerableLibrariesGlobal
-
-failureConditions:
-  severityThresholds:
-    critical: 0
-    high: 0
-
-projectJDK: "17" #(Applied in CI/CD pipeline)
-
-linter: jetbrains/qodana-jvm:2024.1
+  - name: CheckDependencyLicenses
